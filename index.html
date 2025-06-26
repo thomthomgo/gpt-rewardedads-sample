@@ -47,10 +47,9 @@
 
           googletag.pubads().addEventListener("rewardedSlotGranted", (event) => {
             rewardPayload = event.payload;
-            console.log(`unity://rewardgranted:${event.payload.amount}`);
             updateStatus("Reward granted.");
             console.log("status updated");
-            window.location.href = `unity://rewardgranted:${event.payload.amount}`;
+            window.location.href = `https://thomthomgo.github.io/gpt-rewardedads-sample/rewardGranted.html`;
           });
 
           googletag.pubads().addEventListener("slotRenderEnded", (event) => {
