@@ -47,10 +47,10 @@
 
           googletag.pubads().addEventListener("rewardedSlotGranted", (event) => {
             rewardPayload = event.payload;
-            console.log(`unity://${rewardgranted}:${event.payload.amount}`);
+            console.log(`unity://rewardgranted:${event.payload.amount}`);
             updateStatus("Reward granted.");
             console.log("status updated");
-            window.location.href = `unity://${rewardgranted}:${event.payload.amount}`;
+            window.location.href = `unity://rewardgranted:${event.payload.amount}`;
           });
 
           googletag.pubads().addEventListener("slotRenderEnded", (event) => {
